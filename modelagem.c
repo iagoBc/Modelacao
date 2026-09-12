@@ -82,20 +82,20 @@ void restricoes(int hidros_num, int vazao_rio, hidro *hidros, central *centrais,
         printf("= %d;\n", centrais[i].demanda);
     }
 
-//    for(int i=0; i<hidros_num; i++){    // Vi >= 0 -> energia produzida pela //hidreletrica deve ser maior ou igual a 0
-//        printf("V%d >= 0;\n", i+1);
-//    }
-//
-//    for(int i=0; i<hidros_num; i++){    // eij >= 0 -> energia que sai da //hidreletrica deve ser maior ou igual a 0
-//        for(int j=0; j<hidros[i].num_arcos; j++){
-//            printf("e%d_%d >= 0;\n", i+1, hidros[i].arcos[j].indice_c);
-//        }
-//    }     
-//                                                                               
-//    for(int i=0; i<central_num; i++){   // eij >= 0 -> energia que sai da central //deve ser maior ou igual a 0
-//        for(int j=0; j<centrais[i].num_arcos; j++){
-//            printf("e%d_%d >= 0;\n", hidros_num+i+1, centrais[i].arcos[j].indice_c);
-//        }
-//    }                                                                                     
+    for(int i=0; i<hidros_num; i++){    // Vi >= 0 -> energia produzida pela hidreletrica deve ser maior ou igual a 0
+        printf("V%d >= 0;\n", i+1);
+    }
+
+    for(int i=0; i<hidros_num; i++){    // eij >= 0 -> energia que sai da hidreletrica deve ser maior ou igual a 0
+        for(int j=0; j<hidros[i].num_arcos; j++){
+            printf("e%d_%d >= 0;\n", i+1, hidros[i].arcos[j].indice_c);
+        }
+    }     
+                                                                               
+    for(int i=0; i<central_num; i++){   // eij >= 0 -> energia que sai da central deve ser maior ou igual a 0
+        for(int j=0; j<centrais[i].num_arcos; j++){
+            printf("e%d_%d >= 0;\n", hidros_num+i+1, centrais[i].arcos[j].indice_c);
+        }
+    }                                                                                     
 }
 
