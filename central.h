@@ -6,9 +6,8 @@
 
 typedef struct{
     int demanda;
-    int vizinhos;
     int num_arcos;
-    arco *arcos;
-} central;
+    Arco *arcos;
+} Central;
 
 #endif

@@ -7,6 +7,6 @@ typedef struct{
     int capacidade;
     int custo;
     int indice_c;
-} arco;
+} Arco;
 
 #endif

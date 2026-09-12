@@ -9,8 +9,8 @@ typedef struct{
     int eficiencia;
     int custo_producao;
     int num_arcos;
-    arco *arcos;
-} hidro;
+    Arco *arcos;
+} Hidro;
 
 #endif
 
