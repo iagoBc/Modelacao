@@ -1,5 +1,5 @@
 # PROGRAMA
-    PROG = main
+    PROG = energia
 
 # arquivos a compilar
 	HDR = $(wildcard *.h)			# headers
@@ -9,8 +9,8 @@
 	CFLAGS = -Wall -g -std=c99
 .PHONY: all clean purge
 
-%.o: %.c %.h
-	$(CC) -o $@ $<
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 all: $(PROG)
 
