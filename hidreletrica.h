@@ -1,16 +1,12 @@
-#ifndef __HIDRELETRICA__
-#define __HIDRELETRICA__
+#ifndef __HIDRELETRICA_H__
+#define __HIDRELETRICA_H__
 
-#include <stdio.h>
-#include "arco.h"
 
 typedef struct{
-    int capacidade;
-    int eficiencia;
-    int custo_producao;
-    int num_arcos;
-    Arco *arcos;
-} Hidro;
+    int capacidade;         // Capacidade maxima de energia que a hidreletrica pode produzir
+    int eficiencia;         // Eficiencia da hidreletrica
+    int custo;              // Custo de producao de energia da hidreletrica
+} Hidre;
 
 #endif
 

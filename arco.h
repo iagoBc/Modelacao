@@ -4,9 +4,10 @@
 #include <stdio.h>
 
 typedef struct{
-    int capacidade;
-    int custo;
-    int indice_c;
+    int capacidade;     // Capacidade de transmissao do arco
+    int custo;          // Custo de transmissao do arco
+    int destino;        // Destino do arco
+    int origem;         // Origem do arco
 } Arco;
 
 #endif
