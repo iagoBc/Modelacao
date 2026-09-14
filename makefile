@@ -2,14 +2,14 @@
     PROG = energia
 
 # arquivos a compilar
-	HDR = $(wildcard *.h)			# headers
-	SRC = $(wildcard *.c)			# fontes C
-	OBJ = $(patsubst %.c,%.o,$(SRC))	# objetos .o
+	HDR = $(wildcard codigos/*.h)			# headers
+	SRC = $(wildcard codigos/*.c)			# fontes C
+	OBJ = $(SRC:.c=.o)				# objetos .o
 	CC = gcc
 	CFLAGS = -Wall -g -std=c99
 .PHONY: all clean purge
 
-%.o: %.c
+codigos/%.o: codigos/%.c $(HDR)
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 all: $(PROG)
@@ -18,7 +18,7 @@ $(PROG): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^ 
 	
 clean:
-	@rm -f *~ *.o
+	@rm -f *~ *.o codigos/*.o
 
 purge:  clean
 	@rm -f $(PROG) 
