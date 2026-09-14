@@ -64,6 +64,6 @@ void restricoes(uint hidros_num, uint central_num, uint arcos_num, uint vazao_ri
         printf("= %d;\n", centrais[i].demanda);                                                 // sum(eij) - sum(e(i+h)j) >= Di
     }
 
-    for(uint i = 0; i<hidros_num; i++)printf("V%d >= 1;\n", i+1);                                 // Vi > 0
-    for(uint i = 0; i<arcos_num; i++) printf("e%d_%d >= 1;\n", arcos[i].origem, arcos[i].destino);            // eij > 0 
+    for(uint i = 0; i<hidros_num; i++)printf("V%d >= 0;\n", i+1);                                 // Vi > 0
+    for(uint i = 0; i<arcos_num; i++) printf("e%d_%d >= 0;\n", arcos[i].origem, arcos[i].destino);            // eij > 0 
 }
