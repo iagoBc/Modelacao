@@ -1,13 +1,13 @@
 #ifndef __ARCO_H__
 #define __ARCO_H__
 
-#include <stdio.h>
+typedef unsigned int uint;
 
 typedef struct{
-    int capacidade;     // Capacidade de transmissao do arco
-    int custo;          // Custo de transmissao do arco
-    int destino;        // Destino do arco
-    int origem;         // Origem do arco
+    uint capacidade;     // Capacidade de transmissao do arco
+    uint custo;          // Custo de transmissao do arco
+    uint destino;        // Destino do arco
+    uint origem;         // Origem do arco
 } Arco;
 
 #endif

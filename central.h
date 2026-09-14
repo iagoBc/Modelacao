@@ -1,9 +1,10 @@
 #ifndef __CENTRAL_H__
 #define __CENTRAL_H__
 
+typedef unsigned int uint;
 
 typedef struct{
-    int demanda; // Demanda de energia da central
+    uint demanda; // Demanda de energia da central
 } Central;
 
 #endif

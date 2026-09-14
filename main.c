@@ -7,7 +7,6 @@
 #include "modelagem.h"
 #include "arco.h"
 
-typedef unsigned int uint;
 
 // Função para ler os dados de entrada
 void ler_dados(uint hidro_num, uint central_num, uint *arcos_num, Hidre *hidros, Central *centrais, Arco **arcos){
