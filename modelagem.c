@@ -31,8 +31,6 @@ void restricoes(uint hidros_num, uint central_num, uint arcos_num, uint vazao_ri
     for(uint i=0; i<hidros_num; i++){    
         printf("%d*V%d <= %d;\n", hidros[i].eficiencia, i+1, hidros[i].capacidade);             // Fi x Vi <= Mi
         
-        printf("V%d <= %d;\n", i+1, vazao_rio);                                                 // Vi <= R 
-        
         printf("V%d >= 0;\n", i+1);                                                             // Vi >= 0 
 
         for(uint j=0; j<arcos_num; j++){                                                        // sum(eij) = Fi x Vi             
@@ -42,6 +40,11 @@ void restricoes(uint hidros_num, uint central_num, uint arcos_num, uint vazao_ri
             }
             printf(" = %d*V%d;\n", hidros[i].eficiencia, i+1);    
         }
+    
+    for(uint i=0; i<hidros_num; i++){ // Vi <= R 
+        printf("+V%d ", i+1);                                                 
+    }
+    printf("<= %d;\n", vazao_rio);      
 
     for(uint i=0; i<arcos_num; i++){ 
             printf("e%d_%d <= %d;\n", i+1, arcos[i].destino, arcos[i].capacidade);              // eij <= wij 
